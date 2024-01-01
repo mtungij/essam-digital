@@ -6,7 +6,11 @@ module.exports = {
   content: [
     "./app/Views/**/*.{php, html, js}",
     "./node_modules/flowbite/**/*.js",
+       'darkMode','class',
   ],
+
+  
+
 
   darkMode: "class",
   theme: {

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\SalaryModel;
 use App\Models\UserModel;
 
 class User extends BaseController
@@ -67,9 +68,47 @@ class User extends BaseController
               $id = $this->request->getPost('id');
               $user_input = $this->validator->getValidated();
 
-              $id = $this->request->getPost('id');
               model(UserModel::class)->where('id', $id)->set($user_input)->update();
               return redirect('users');
        }
+
+       
    }
+
+
+   public function salary()
+   {
+     $salary=model(SalaryModel::class)->TodaySalary();
+     $user=model(UserModel::class)->findAll();
+    return view('users/salary',['user'=>$user,'salary'=> $salary]);
+   }
+
+   public function paysalary()
+   {
+     $userId= $this->request->getPost('userId');
+     $amount =$this->request->getPost('amount');
+
+     $data =['user_id'=>$userId,'amount'=>$amount];
+
+     $salary=model(SalaryModel::class)->insert($data);
+
+
+     return redirect('salary');
+
+
+
+   }
+
+   
+
+   
+
+public function logout()
+
+{
+    session()->destroy();
+    return redirect ('login');
+}
+
+
 }

@@ -65,4 +65,17 @@ class OrdersModel extends Model
             'pager' => $this->pager,
         ];
     }
+
+
+    public function getTodayOrders()
+    {
+       $data = $this->builder()
+            ->select('orders.*, users.username')
+            ->join('users', 'orders.user_id = users.id')
+            ->where('DATE(orders.created_at)', date('Y-m-d'))
+            ->orderBy('orders.created_at', 'DESC')->get()->getResult();
+        return $data;
+    }
 }
+
+

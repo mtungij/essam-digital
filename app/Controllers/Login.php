@@ -34,6 +34,7 @@ class Login extends BaseController
                 //initialize sessions
                 session()->set('user_id', $user->id);
                 session()->set('username', $user->username);
+                session()->set('name', $user->name);
                 session()->set('position', $user->position);
                 return redirect()->to('/');
             } {

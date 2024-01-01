@@ -1,24 +1,123 @@
 <?= $this->extend('main')?>
 
 <?= $this->section('content')?>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-    <div class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"></div>
+
+<div class="bg-gray-100  flex ">
+    <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-4">
+        <!-- Project Completion Card -->
+        <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-6  rounded-lg shadow-lg text-white">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">Number Of Staff</h2>
+                    <p class="text-3xl font-bold mt-2"><?= $usercount ?></p>
+                </div>
+                <div class="bg-white p-3 rounded-full">
+                    <svg class="text-pink-500 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4">
+               
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-6  rounded-lg shadow-lg text-white">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">Today Customer</h2>
+                    <p class="text-3xl font-bold mt-2"><?= $customercount ?></p>
+                </div>
+                <div class="bg-white p-3 rounded-full">
+                    <svg class="text-pink-500 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4">
+               
+            </div>
+        </div>
+
+        <!-- Health Tracker Card -->
+        <div class="bg-gradient-to-br from-green-500 to-blue-500 p-6 rounded-lg shadow-lg text-white">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">Today Order</h2>
+                    <p class="text-3xl font-bold mt-2">10,234</p>
+                </div>
+                <div class="bg-white p-3 rounded-full">
+                    <svg class="text-blue-500 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4">
+               
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-500 to-blue-500 p-6 rounded-lg shadow-lg text-white">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">Monthly Balance</h2>
+                    <p class="text-3xl font-bold mt-2">10,234</p>
+                </div>
+                <div class="bg-white p-3 rounded-full">
+                    <svg class="text-blue-500 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4">
+               
+            </div>
+        </div>
+
+
+        <!-- Performance Card -->
+        <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-6 rounded-lg shadow-lg text-white">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">Today Profit</h2>
+                    <p class="text-3xl font-bold mt-2">92000</p>
+                </div>
+                <div class="bg-white p-3 rounded-full">
+                    <svg class="text-blue-700 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4">
+               
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-6  rounded-lg shadow-lg text-white">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold">Year Profit</h2>
+                    <p class="text-3xl font-bold mt-2">5</p>
+                </div>
+                <div class="bg-white p-3 rounded-full">
+                    <svg class="text-pink-500 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-4">
+               
+            </div>
+        </div>
+
+
+    </div> 
 </div>
-<div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
-<div class="grid grid-cols-2 gap-4 mb-4">
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-</div>
-<div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
-<div class="grid grid-cols-2 gap-4">
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-</div>
+
 <?= $this->endSection()?>
