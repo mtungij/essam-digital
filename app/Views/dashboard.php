@@ -5,7 +5,7 @@
 <div class="bg-gray-100  flex ">
     <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-4">
         <!-- Project Completion Card -->
-        <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-6  rounded-lg shadow-lg text-white">
+        <div class="bg-gradient-to-r from-yellow-300 to-yellow-300 p-6  rounded-lg shadow-lg text-white">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="text-lg font-semibold">Number Of Staff</h2>
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-6  rounded-lg shadow-lg text-white">
+        <div class="bg-gradient-to-r from-yellow-300 to-yellow-300 p-6  rounded-lg shadow-lg text-white">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="text-lg font-semibold">Today Customer</h2>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Health Tracker Card -->
-        <div class="bg-gradient-to-br from-green-500 to-blue-500 p-6 rounded-lg shadow-lg text-white">
+        <div class="bg-gradient-to-r from-yellow-300 to-yellow-300 p-6 rounded-lg shadow-lg text-white">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="text-lg font-semibold">Today Order</h2>
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="bg-gradient-to-br from-green-500 to-blue-500 p-6 rounded-lg shadow-lg text-white">
+        <div class="bg-gradient-to-r from-yellow-300 to-yellow-300 p-6 rounded-lg shadow-lg text-white">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="text-lg font-semibold">Monthly Balance</h2>
@@ -80,7 +80,7 @@
 
 
         <!-- Performance Card -->
-        <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-6 rounded-lg shadow-lg text-white">
+        <div class="bg-gradient-to-r from-yellow-300 to-yellow-300 p-6 rounded-lg shadow-lg text-white">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="text-lg font-semibold">Today Profit</h2>
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <div class="bg-gradient-to-r from-purple-600 to-pink-500 p-6  rounded-lg shadow-lg text-white">
+        <div class="bg-gradient-to-r from-yellow-300 to-yellow-300 p-6  rounded-lg shadow-lg text-white">
             <div class="flex items-center justify-between">
                 <div>
                     <h2 class="text-lg font-semibold">Year Profit</h2>

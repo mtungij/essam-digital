@@ -2,12 +2,8 @@
 
 <?= $this->section('content'); ?>
 <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">
-    <div class="mx-auto bg-white py-4 rounded-md max-w-screen-xl px-4 lg:px-12">
-        <!-- Start coding here -->
-        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
-            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
-                <div class="w-full md:w-1/2">
-                    <?php if (validation_errors()): ?>
+
+                      <?php if (validation_errors()): ?>
                         <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
                             role="alert">
                             <svg class="flex-shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true"
@@ -23,7 +19,45 @@
                                 </ul>
                             </div>
                         </div>
-                    <?php endif ?>
+                        <?php elseif(session()->has('delete')) :?>
+            <div id="alert-1" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+           </svg>
+           <div class="ms-3 text-sm font-medium">
+           <p> <?= session()->getFlashdata('delete') ?></p> <a href="#" class="font-semibold underline hover:no-underline">
+            </div>
+            </div>
+
+            <?php elseif(session()->has('create_user')) :?>
+            <div id="alert-1" class="flex items-center p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+           </svg>
+           <div class="ms-3 text-sm font-medium">
+           <p> <?= session()->getFlashdata('create_user') ?></p> <a href="#" class="font-semibold underline hover:no-underline">
+            </div>
+            </div>
+
+            <?php elseif(session()->has('edit_user')) :?>
+            <div id="alert-1" class="flex items-center p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+           </svg>
+           <div class="ms-3 text-sm font-medium">
+           <p> <?= session()->getFlashdata('edit_user') ?></p> <a href="#" class="font-semibold underline hover:no-underline">
+            </div>
+            </div>
+
+
+             </div>
+            <?php endif ?>
+
+    <div class="mx-auto bg-white py-4 rounded-md max-w-screen-xl px-4 lg:px-12">
+  <!-- #region -->
+        <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+                <div class="w-full md:w-1/2">
                     <form class="flex items-center">
                         <label for="simple-search" class="sr-only">Search</label>
                         <div class="relative w-full">
@@ -45,27 +79,23 @@
                     class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
                     <button type="button" data-modal-target="authentication-modal"
                         data-modal-toggle="authentication-modal"
-                        class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                        <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path clip-rule="evenodd" fill-rule="evenodd"
-                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                        </svg>
-                        Add staff
+                        class="flex items-center justify-center text-white  focus:ring-primary-300  bg-yellow-400 hover:bg-indigo-800 focus:ring-4  font-bold rounded-lg text-sm px-4 py-2 dark:bg-primary-600  dark:focus:ring-primary-800">
+                        Register Staff
                     </button>
 
+                    
 
                     <!-- Main modal -->
                     <div id="authentication-modal" tabindex="-1" aria-hidden="true"
                         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                         <div class="relative p-4 w-full max-w-md max-h-full">
                             <!-- Modal content -->
-                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <div class="relative bg-yellow-300 rounded-lg shadow dark:bg-gray-700">
                                 <!-- Modal header -->
                                 <div
                                     class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                        Register Staff
+                                    <h3 class="text-xl font-bold text-white dark:text-white">
+                                        REGISTER STAFF
                                     </h3>
                                     <button type="button"
                                         class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -78,9 +108,10 @@
                                         <span class="sr-only">Close modal</span>
                                     </button>
                                 </div>
+                                
                                 <!-- Modal body -->
-                                <div class="p-4 md:p-5">
-                                    <form class="space-y-4" action="<?= url_to('users/create') ?>" method="post">
+                                <div class="p-2 md:p-5">
+                                    <form class="space-y-2" action="<?= url_to('users/create') ?>" method="post">
                                         <?= csrf_field() ?>
                                         <div>
                                             <label for="name"
@@ -127,8 +158,8 @@
                                         </div>
 
                                         <button type="submit"
-                                            class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
-
+                                            class="w-full  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+                                            
                                     </form>
                                 </div>
                             </div>
@@ -207,3 +238,12 @@
     </div>
 </section>
 <?= $this->endSection(); ?>
+
+
+
+
+
+
+
+
+        

@@ -18,7 +18,7 @@
             <input type="number" name="amount" id="visitors" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
         </div>
         <div class="flex flex-row-reverse ">  
-      <button type="submit" class="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+      <button type="submit" class=" focus:outline-none text-white bg-yellow-400 hover:bg-indigo-800 focus:ring-4  font-bold rounded-lg text-sm px-4 py-2 dark:bg-primary-600   w-full sm:w-auto text-center ">Submit</button>
     </div>
     </div> 
     
@@ -45,7 +45,7 @@
                       <tr class="border-b dark:border-gray-600 hover:bg-gray-100">
                           <td class="w-4 px-4 py-3">
                               <div class="flex items-center">
-                                  <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        
                                   <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                               </div>
                           </td>

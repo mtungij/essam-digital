@@ -42,6 +42,7 @@ $routes->post('balance', 'SalioController::create');
 // maintanance routes
 $routes->get('maintanance','MaintananceController::maintanance');
 $routes ->post('store','MaintananceController::store' );
+$routes ->get('MatengenezoReport','MaintananceController::MatengenezoReport');
 
 //payroll routes
 $routes->get('payroll','PayrollController::index');

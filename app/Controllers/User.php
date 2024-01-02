@@ -37,14 +37,14 @@ class User extends BaseController
 
         model(UserModel::class)->insert($user_input);
 
-        return redirect('users');
+        return redirect()->back()->with('create_user' ,'Staff Registered Successfully ');
     }
 
     public function delete()
     {
         $id = $this->request->getPost('id');
         model(UserModel::class)->delete($id);
-        return redirect()->back();
+        return redirect()->back()->with('delete','staff deleted sucessfully');
     }
 
     public function edit($id)
@@ -69,7 +69,7 @@ class User extends BaseController
               $user_input = $this->validator->getValidated();
 
               model(UserModel::class)->where('id', $id)->set($user_input)->update();
-              return redirect('users');
+              return redirect('users')->with('edit_user','Staff Updated Successfully');
        }
 
        

@@ -1,5 +1,5 @@
 <nav
-            class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+            class="bg-indigo-900 border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="flex justify-start items-center">
                     <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
@@ -20,9 +20,12 @@
                         <span class="sr-only">Toggle sidebar</span>
                     </button>
                     <a href="" class="flex items-center  justify-between mr-4">
-                        <img src="/image/logo.jpg" class="mr-3 h-8 " alt="Flowbite Logo" />
+                        <img class="w-10 mx-3 rounded-md" src="/image/logo.jpg" class="mr-3 h-8 "  alt="Flowbite Logo" />
                         <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Essam Digital</span>
+                            class="self-center text-3xl mx-2  f font-bold whitespace-nowrap text-white">ESSAM</span>
+                            <span
+                            class="self-center text-3xl font-bold whitespace-nowrap text-yellow-300">DIGITAL CREATIVES</span>
+                            </span>
                     </a>
                 </div>
                 <div class="flex items-center lg:order-2">
@@ -40,7 +43,7 @@
                    
                    
                     <a href="/logout" type="button" data-dropdown-toggle="apps-dropdown"
-                        class="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                        class="p-2 text-white rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                         <span class="sr-only">View notifications</span>
                         <!-- Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
@@ -58,9 +61,9 @@
                     <div class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
                         id="dropdown">
                         <div class="py-3 px-4">
-                            <span class="block text-sm font-semibold text-gray-900 dark:text-white"><?= session('name') ?></span>
+                            <span class="block text-sm font-semibold text-blue-300 dark:text-white"><?= session('name') ?></span>
                         </div>
-                        <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
+                        <ul class="py-1 text-yellow-300 font-bold dark:text-gray-300" aria-labelledby="dropdown">
                         
                             <li>
                                 <a href="#"

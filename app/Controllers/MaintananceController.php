@@ -2,8 +2,14 @@
 
 namespace App\Controllers;
 
+
+
+
 use App\Controllers\BaseController;
 use App\Models\MaintananceModel;
+use App\Models\SalioModel;
+use mpdf\mpdf;
+
 
 class MaintananceController extends BaseController
 {
@@ -33,4 +39,21 @@ class MaintananceController extends BaseController
        
        return redirect()->back()->with('successcreate','Order added successfully');
 }
+
+public function matengenezoReport()
+{
+    $maoni=model(SalioModel::class)->findAll();
+   
+    // dd($maoni);
+
+    $mpdf = new \Mpdf\Mpdf();
+		$html = view('matengenezo/report',['maoni'=>$maoni]);
+		$mpdf->WriteHTML($html);
+		$this->response->setHeader('Content-Type', 'application/pdf');
+		$mpdf->Output('arjun.pdf','I'); 
+       
+   
+    
+}
+
 }

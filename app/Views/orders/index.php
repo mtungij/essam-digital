@@ -3,7 +3,7 @@
 <?= $this->section('content') ;?>
 
 <section class="bg-gray-50 w-full dark:bg-gray-900 py-3 sm:py-5">
-    <div class="mx-50 max-w-full px-4 lg:px-12">
+    <div class="w-full">
         <!-- Start coding here -->
      <div class="sm:px-6 py-8 flex flex-col rounded-xl bg-white dark:bg-gray-900">
           <?php if(session()->has('successcreate')): ?>
@@ -39,7 +39,7 @@
 
 
                 <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                <a href="/orders/create" class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+                <a href="/orders/create" class="flex items-center justify-center  text-white bg-yellow-400 hover:bg-indigo-800 focus:ring-4  font-bold rounded-lg text-sm px-4 py-2 dark:bg-primary-600  focus:outline-none ">
                         
                         Add New Order
                     </a>

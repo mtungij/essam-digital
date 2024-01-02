@@ -11,7 +11,7 @@
 
               <?php foreach ($balanc as $item) : ?>
               <h5>
-                  <span class="bg-blue-100 text-red-800 text-xs font-bold inline-flex items-center px-8 py-3 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
+                  <span class="bg-indigo-900 text-white text-xs mr-5 me-0 font-bold inline-flex items-center px-8 py-3 rounded dark:bg-gray-700  border border-yellow-500">
                         <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
                         </svg>
@@ -21,14 +21,13 @@
                   <?php endforeach ?>
               </div>
               <div class="flex flex-col flex-shrink-0 space-y-3 md:flex-row md:items-center lg:justify-end md:space-y-0 md:space-x-3">
-                  <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                      <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                          <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                      </svg>
+                  <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg  bg-yellow-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">
                       Add Balance
                  </button>
               </div>
-
+               <a href="MatengenezoReport"target="_blank" >
+              <svg class="text-blue-500 font-bold" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              </a>
     <!-- Modal start     -->
 <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
@@ -49,7 +48,7 @@
             <!-- Modal body -->
 
             <form action="/balance" method="post">
-            <div class="p-4 md:p-5">
+            <div class="md:p-1">
                     <div>
                         <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date</label>
                         <input type="date" name="created_time" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required>
@@ -66,11 +65,13 @@
                             <option value="CASH">CASH</option>
                             <option value="CRDB">CRDB</option>
                             <option value="NMB">NMB</option>
+                            <option value="LIPA-MPESA">LIPA-MPESA</option>
                             <option value="TIGO-PESA">TIGO-PESA</option>
                         </select>
                   
-                    
-                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">SAVE</button>
+                    <div class="bg-yellow-500">
+                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">SAVE</button>
+                    </div>
                     </div>
             </div>
             </form>
@@ -86,7 +87,7 @@
           </div>
           <div class="overflow-x-auto">
               <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <thead class="text-xs text-white uppercase   bg-blue-900 dark:bg-gray-700 dark:text-gray-400">
                     
                       
                       <tr>
@@ -112,7 +113,7 @@
                       <tr class="border-b dark:border-gray-600 hover:bg-gray-100">
                           <td class="w-4 px-4 py-3">
                               <div class="flex items-center">
-                                  <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                 
                                   <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                               </div>
                           </td>
