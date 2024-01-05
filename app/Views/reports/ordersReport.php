@@ -36,24 +36,32 @@ h1{
 </head>
 <body>
 
-<h1>MAINTANANCE REPORT</h1>
+<h1>TODAY ORDER REPORT</h1>
 
 <table id="customers">
   <tr>
      <th>S/No</th>
-    <th>DATE</th>
-    <th>AMOUNT</th>
-    <th>PAYMENT METHOD</th>
+    <th>CUSTOMER NAME</th>
+    <th>PHONE NUMBER</th>
+    <th>ORDER TYPE</th>
+    <th>WORK BUDGET</th>
+    <th>WORK COST</th>
+    <th>WORK EXPENSES</th>
   </tr>
   <?php $rowId = 1 ;?>
-  <?php foreach ($maoni as $item) : ?>
+  <?php foreach ($orders as $item) : ?>
   <tr>
     <td><?= $rowId ++ ?></td>
-    <td><?= $item->created_time  ?></td>
-    <td><?= $item->income ?></td>
-    <td><?= $item->payment_method ?></td>
+    <td><?= $item->customer ?></td>
+    <td> <?= $item->phone ?></td>
+    <td><?= $item->order_type ?></td>
+    <td><?= number_format($item->budget) ?></td>
+    <td><?= number_format($item->cost) ?></td>
+    <td><?= number_format($item->budget - $item->cost) ?></td>
   </tr>
+  <tr>
   <?php endforeach ?>
+
 </table>
 
 </body>

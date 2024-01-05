@@ -13,7 +13,7 @@ class MaintananceModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'expenses', 'amount', 'suggesstion', 'created_at'
+        'expenses', 'amount', 'suggestion', 'created_at'
     ];
 
     // Dates

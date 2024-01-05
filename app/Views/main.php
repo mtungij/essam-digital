@@ -14,6 +14,8 @@ function format_date($date)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/alpine.js"></script>
+    <script defer src="/js/min.js"></script>
     <title>Esssam Digital</title>
 </head>
 

@@ -51,23 +51,22 @@
                   <input type="number" name="phone" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="<?= old('phone') ?>" required="">
               </div>
               <div class="w-full">
-                  <label for="order_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Order Description</label>
+                  <label for="order_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Order Type</label>
                   <input type="text" name="order_type" id="order_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="<?= old('order_type') ?>" required="">
               </div>
                 <div class="w-full">
                     <label for="budget" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Budget</label>
-                    <input type="number" name="budget" id="budget" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="<?= old('budget') ?>" required="">
+                    <input x-data  x-mask:dynamic="$money($input)" name="budget" id="budget" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="<?= old('budget') ?>" required="">
                 </div>
               <div>
                   <label for="cost" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Expenses Cost</label>
-                  <input type="number" name="cost" id="cost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="<?= old('cost') ?>" required="">
+                  <input x-data  x-mask:dynamic="$money($input)" name="cost" id="cost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="<?= old('cost') ?>" required="">
               </div> 
               <div class="sm:col-span-2">
-                  <label for="expenses" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Expenses</label>
+                  <label for="expenses" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Order Materials</label>
                   <textarea id="expenses" rows="8" name="expenses" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Expenses " value="<?= old('expenses') ?>"></textarea>
               </div>
           </div>
-          
           <button type="submit" class="  px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-yellow-400 hover:bg-indigo-800">
               Add Order
           </button>

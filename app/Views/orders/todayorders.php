@@ -4,8 +4,18 @@
 
 
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+<div class="relative flex justify-end">
+<a href="/todayreport" target="_blank" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+        </svg>
+        Download
+        </a>
+</div>
+
+
+<div class="relative   sm:rounded-lg">
+    <table class="w-full text-sm   text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
@@ -43,7 +53,7 @@
                 <?= $value->order_type ?>
             </td>
             <td class="px-6 py-4">
-                <?= $value->budget ?>
+                <?= number_format($value->budget) ?>
             </td>
             <td class="px-6 py-4">
             <?= $value->username ?>

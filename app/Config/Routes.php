@@ -30,14 +30,17 @@ $routes->group('orders', function ($routes) {
     $routes->post('delete', 'OrdersController::delete');
     $routes->get('todayorders', 'OrdersController::todayOrders');
     $routes->get('searchorders','OrdersController::oldOrders');
+   
+    $routes->get('previousorders/(:segment)/(:segment)', 'OrdersController::previous/$1/$2');
 
-    
+
 });
 
  //salio routes
 
  $routes->get('salio', 'SalioController::salio');
 $routes->post('balance', 'SalioController::create');
+$routes->get('todayreport','OrdersController::todayreport');
 
 // maintanance routes
 $routes->get('maintanance','MaintananceController::maintanance');

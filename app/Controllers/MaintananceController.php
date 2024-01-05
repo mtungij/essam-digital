@@ -25,14 +25,18 @@ class MaintananceController extends BaseController
             'expenses' => 'required',
             'amount' => 'required',
             'suggestion' => 'required',
-        ])){
 
+        ])){
+                       
             return redirect()->back()->withInput()->with('erros','please fill all field');     
     }
 
      $validatedData = $this->validator->getValidated();
 
-    //  dd($validatedData);
+    //  dd($validatedData); 
+
+    $validatedData['expenses'] = str_replace(',', '', $validatedData['expenses']);
+    $validatedData['amount'] = str_replace(',', '', $validatedData['amount']);
 
      model(MaintananceModel::class)->insert($validatedData );
 
@@ -50,7 +54,7 @@ public function matengenezoReport()
 		$html = view('matengenezo/report',['maoni'=>$maoni]);
 		$mpdf->WriteHTML($html);
 		$this->response->setHeader('Content-Type', 'application/pdf');
-		$mpdf->Output('arjun.pdf','I'); 
+		$mpdf->Output('matengenezo.pdf','I'); 
        
    
     

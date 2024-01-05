@@ -62,6 +62,7 @@
                             </li>
                         </ul>                                                                                
                     </li>
+                    <?php if(session('position')=="Admin"):?>
                     <li>
                         <button type="button"
                             class="flex items-center p-2 w-full text-base font-medium text-white rounded-lg transition duration-75 group hover:bg-yellow-400 dark:text-white dark:hover:bg-gray-700"
@@ -75,7 +76,6 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-
                         <ul id="dropdown-sales" class="hidden py-2 space-y-2">
                             <li>
                             <a href="/users"
@@ -86,12 +86,14 @@
                                 <a href="/salary"
                                     class="flex items-center p-2 pl-11 w-full text-base font-medium text-white rounded-lg transition duration-75 group hover:bg-yellow-400 dark:text-white dark:hover:bg-gray-700">Pay Salary</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="/payroll"
                                     class="flex items-center p-2 pl-11 w-full text-base font-medium text-white rounded-lg transition duration-75 group hover:bg-yellow-400 dark:text-white dark:hover:bg-gray-700">Salary Sheet</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
+                    <?php endif ?>
+                    <?php if(session('position')=='Admin'):?>
                     <li>
                         <a href="/salio"
                             class="flex items-center p-2 text-base font-medium text-white rounded-lg dark:text-white hover:bg-yellow-400 dark:hover:bg-gray-700 group">
@@ -99,8 +101,9 @@
                             <span class="flex-1 ml-3 whitespace-nowrap text-white">Monthly Balance</span>
                         </a>
                     </li>
+                    
                     <li>
-                </ul>
+                
               
                         <a href="/maintanance"
                             class="flex items-center p-2 text-base font-medium text-white rounded-lg transition duration-75 hover:bg-yellow-400 dark:hover:bg-gray-700 dark:text-white group">
@@ -109,7 +112,7 @@
                         </a>
                     </li>
                     
-                </ul>
+                    <?php endif ?>
             </div>
           
     </div>

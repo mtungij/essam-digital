@@ -24,7 +24,7 @@
                         <span
                             class="self-center text-3xl mx-2  f font-bold whitespace-nowrap text-white">ESSAM</span>
                             <span
-                            class="self-center text-3xl font-bold whitespace-nowrap text-yellow-300">DIGITAL CREATIVES</span>
+                            class="self-center text-3xl font-bold whitespace-nowrap text-white">DIGITAL CREATIVES</span>
                             </span>
                     </a>
                 </div>
@@ -65,11 +65,11 @@
                         </div>
                         <ul class="py-1 text-yellow-300 font-bold dark:text-gray-300" aria-labelledby="dropdown">
                         
-                            <li>
+                            <!-- <li>
                                 <a href="#"
                                     class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Change 
                                     Password</a>
-                            </li>
+                            </li> -->
                         </ul>
                         
                     </div>

@@ -42,16 +42,16 @@
             <div class="p-4 md:p-5">
                     <div>
                         <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Expenses</label>
-                        <input type="text" name="expenses" id="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off"  required>
+                        <input type="text" name="expenses" id="password" placeholder="example Gross paper" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" required>
                     </div>
-                    
+
                     <div>
                         <label for="amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount</label>
-                        <input type="text" name="amount" id="password" placeholder="••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" required>
+                        <input  x-data  x-mask:dynamic="$money($input)" name="amount" id="password" placeholder="eg 150,000" class="bg-gray-50 border border-gray-300 text-blue-900  text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" required>
 
                         <div>
                         <label for="suggestion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Suggestion</label>
-                        <input type="text" name="suggestion" id="password" placeholder="••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" required>
+                        <input type="text" name="suggestion" id="password" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" required>
                     </div>
                     </div>
                     <div>
@@ -111,7 +111,7 @@
                           <?= $value->expenses ?>
                           </td>
                           <td class="px-4 py-2  text-gray-900 ">
-                          <?= $value->amount ?>
+                          <?= number_format($value->amount) ?>
                           </td>
                           <td class="px-4 py-2  text-gray-900 ">
                           <?= $value->suggestion ?>

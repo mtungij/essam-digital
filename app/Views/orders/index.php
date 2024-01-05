@@ -59,7 +59,7 @@
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead class="text-xs  bg-blue-900 text-white uppercase  dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-4 py-3">S/N</th>
                             <th scope="col" class="px-4 py-3">CUSTOMER</th>
@@ -69,7 +69,9 @@
                             <th scope="col" class="px-4 py-3">EXPENSES COST</th>
                             <th scope="col" class="px-4 py-3">PROFIT</th>
                             <th scope="col" class="px-4 py-3">DATE</th>
+                            <?php if(session('position') == 'Admin') : ?>
                             <th scope="col" class="px-4 py-3">ACTION</th>
+                            <?php endif ?>
                             
                          
                         </tr>
@@ -85,13 +87,15 @@
                             <td class="px-4 py-3"><?= number_format($order->budget) ?></td>
                             <td class="px-4 py-3"><?= number_format($order->cost) ?></td>
                             <td class="px-4 py-3"><?= number_format($order->budget - $order->cost) ?></td>
-                            <td class="px-4 py-3"><?= date('d-m-Y H:m', strtotime($order->created_at)) ?></td>
+                            <td class="px-4 py-3"><?= $order->created_at ?></td>
+                            <?php if(session('position') == 'Admin') : ?>
                             <td class="px-4 py-3 flex items-center justify-end">
                                     <a href="orders/edit/<?= $order->id ?>" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
                                         preview
                                     </a>
                             </td>
+                            <?php endif ?>
                         </tr>
                         <?php endforeach; ?>
                         

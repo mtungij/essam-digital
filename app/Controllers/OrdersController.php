@@ -41,6 +41,14 @@ class OrdersController extends BaseController
 
        $validatedData = $this->validator->getValidated();
 
+    //    dd($validatedData);
+
+      
+       $validatedData['budget'] = str_replace(',', '', $validatedData['budget']);
+       $validatedData['cost'] = str_replace(',', '', $validatedData['cost']);
+
+    //    dd($validatedData);
+
        model(OrdersModel::class)->save(['user_id' => $user_id, ...$validatedData]);
 
        
@@ -110,7 +118,7 @@ public function oldOrders()
     $end = $this->request->getGet('end');
 
     
-    //    dd($data);
+    //    dd($start);
     
     
     if (!empty($start) && !empty($end)) {
@@ -130,6 +138,23 @@ public function oldOrders()
         $date = date('d-m-Y');
         return view('orders/oldorders', ['orders' => $orders,'data'=> $date]);
     }
+}
+
+public function todayreport()
+
+{
+    $orders = model('OrdersModel')->getTodayOrders();
+
+        //  dd($orders); 
+    $mpdf = new \Mpdf\Mpdf();
+    $mpdf->AddPage('L');
+		$html = view('reports/ordersReport',['orders'=>$orders]);
+		$mpdf->WriteHTML($html);
+		$this->response->setHeader('Content-Type', 'application/pdf');
+		$mpdf->Output('Order.pdf','I'); 
+       
+
+    return view ('orders/create');
 }
 
 }

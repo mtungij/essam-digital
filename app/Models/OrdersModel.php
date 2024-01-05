@@ -15,7 +15,7 @@ class OrdersModel extends Model
     protected $allowedFields    = ['customer', 'phone', 'order_type', 'budget', 'expenses', 'cost', 'user_id'];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

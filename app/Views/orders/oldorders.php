@@ -2,6 +2,9 @@
 
 <?= $this->section('content') ;?>
 
+
+
+
 <form action="/orders/searchorders">
 <div date-rangepicker class="flex items-center">
   <div class="relative">
@@ -27,10 +30,12 @@
 Filter Date
 </button> 
 </div>
+
 </div>
 </form>
 
 
+  
 <p class="mb-3 text-gray-500 dark:text-gray-400"> <?= $data ?></p>
 
 
@@ -63,7 +68,7 @@ Filter Date
                    Project Date
                 </th>
             </tr>
-        </thead>
+        </thead>  
         <tbody>
           <?php foreach ($orders as $item) : ?>
             <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
